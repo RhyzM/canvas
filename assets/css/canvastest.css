@@ -1,0 +1,77 @@
+.bg{
+    background-image: linear-gradient(#74bcff, #DAE6F2);
+}
+
+.wrapper {
+    max-width: 900px;
+    margin: auto;
+    font-family: "Arial";
+}
+.toolbar{
+    margin-top: 40px;
+    width: 100%;
+    overflow: auto;
+}
+.toolbar a {
+    float: left;
+    width: 11%;
+    text-align: center;
+    padding: 6px 5px;
+    transition: all 0.5s ease;
+    color: white;
+}
+
+/* Toolbar Icon */
+
+.tool-fontAw-Icon{
+    font-size: 60px;
+}
+
+.tool-tri-Icon{
+    font-size: 60px;
+}
+
+/* Change color on hover */
+.toolbar a:hover {
+    background-color: #b8d9ff;
+    border-radius: 40%;
+    transition-duration: 1s;
+  }
+/* Change color on selected icon */
+.selected {
+    background-color:#83B5E9;
+}
+.canvasDiv{
+    width: 100%;
+ 
+}
+#img-data-div{
+    width: 100%;
+    max-width: 900px;
+    height: 200px;
+}
+/* Resize image to container */
+.toolbar a img{
+    max-width: 100%;
+    height:auto;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    
+}
+
+#canvas-real{
+    border: 1px black;
+    border-radius: 3%;
+    position: absolute;
+    background-color: #ffffff;
+}
+
+#canvas-draft{
+    border: 1px black;
+    border-radius: 3%;
+    position: absolute;
+    background-color: transparent;
+}

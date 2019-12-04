@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <title>JavaScript Paint App</title>
+    <link rel="stylesheet" type="text/css" href="/ProjectCanvasUpdated/assets/css/canvastest.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/ProjectCanvas/assets/css/colour.css">
+    <link rel="stylesheet" href="/ProjectCanvas/assets/css/tools-icon.css">
+    <link rel="stylesheet" href="/ProjectCanvas/assets/css/colourWheel.css">
+    <script src="https://kit.fontawesome.com/9cf44c700d.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body class="bg">
+
+    <div class="wrapper">
+        <div class="toolbar">
+            <a href="#" id="free" onclick="ChangeTool('free')">
+                <i class="fas fa-pencil-alt tool-fontAw-Icon"></i></a>
+
+            <a href="#" id="line" onclick="ChangeTool('line')">
+                <i class="fas fa-pencil-ruler tool-fontAw-Icon"></i></a>
+
+            <a href="#" id="rectangle" onclick="ChangeTool('rectangle')">
+                <i class="far fa-square tool-fontAw-Icon"></i></a>
+
+            <a href="#" id="circle" onclick="ChangeTool('circle')">
+                <i class="far fa-circle tool-fontAw-Icon"></i></a>
+
+            <a href="#" id="triangle" onclick="ChangeTool('triangle')">
+                <i class="fas fa-caret-up tool-tri-Icon"></i></a>
+
+
+        </div>
+    </div><br>
+    <section class="container-fluid colourSection">
+        <div class="row">
+            <div class="col-1">
+                <h2 class="h2">
+                    Colour Changer
+                </h2>
+                <i class="fas fa-palette colourIcon"></i>
+                <button type="button" class="blackI colourSpace"></button>
+                <button type="button" class="whiteI colourSpace"></button>
+                <button type="button" class="redI colourSpace"></button>
+                <button type="button" class="blueI colourSpace"></button>
+                <button type="button" class="yellowI colourSpace"></button>
+                <button type="button" class="greenI colourSpace"></button>
+                <button type="button" class="orangeI colourSpace"></button>
+                <button type="button" class="purpleI colourSpace"></button>
+            </div>
+            <section class="col-11">
+                <div class='canvasDiv'>
+                    <canvas id="canvas-real" class="canvas" width="1150px" height="720px"
+                        style="border:3px black solid"></canvas>
+                    <canvas id="canvas-draft" class="canvas" width="1150px" height="720px"
+                        style="border:3px black solid"></canvas>
+                </div>
+            </section>
+        </div>
+    </section>
+    <!-- JS -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- <script type="text/javascript" src="canvastest.js"></script> -->
+    <script type="text/javascript" src="/ProjectCanvas/assets/js/canvas-common.js"></script>
+    <script type="text/javascript" src="/ProjectCanvas/assets/js/canvastest.js"></script>
+    <script type="text/javascript" src="/ProjectCanvas/assets/js/drawing-circle.js"></script>
+    <script type="text/javascript" src="/ProjectCanvas/assets/js/drawing-line.js"></script>
+    <script type="text/javascript" src="/ProjectCanvas/assets/js/drawing-rectangle.js"></script>
+    <script type="text/javascript" src="/ProjectCanvas/assets/js/drawing-triangle.js"></script>
+    <script type="text/javascript" src="/ProjectCanvas/assets/js/drawing-straight.js"></script>
+    <script type="text/javascript" src="/ProjectCanvas/assets/js/colourEvent.js"></script>
+    <script type="text/javascript" src="/ProjectCanvas/assets/js/tools-drawingline.js"></script>
+    <!-- <script type="text/javascript" src="colourWheel.js"></script> -->
+
+    <script type="text/javascript">
+        // var selectedStrokeColour = '#000000'
+        // var selectedFillColour = '#000000'
+        currentFunction = new DrawingLine(contextReal, contextDraft);
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>
