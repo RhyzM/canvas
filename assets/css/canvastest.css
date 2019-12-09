@@ -1,16 +1,32 @@
+
+/* Body Style */
+
 .bg{
-    background-image: linear-gradient(#74bcff, #DAE6F2);
+    background:#860038;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 
-.wrapper {
-    max-width: 900px;
-    margin: auto;
-    font-family: "Arial";
+/* Cursor */
+
+canvas:hover {
+    cursor: url(/ProjectCanvas/assets/img/pen-cur.png),default;
+  }
+
+.eraserCursor{
+    cursor: url(/ProjectCanvas/assets/img/erz-cur.png),default;
 }
+
+/* Toolbar Space */
+
 .toolbar{
-    margin-top: 40px;
+    margin-top: 10px;
     width: 100%;
     overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 .toolbar a {
     float: left;
@@ -18,60 +34,127 @@
     text-align: center;
     padding: 6px 5px;
     transition: all 0.5s ease;
-    color: white;
+    color: #FF851B
 }
+.wrapper {
+    max-width: 900px;
+    margin: auto;
+    font-family: "Arial";
+}
+
+
+/* Change Color on Hover */
+
+.toolbar a:hover {
+    background-color: #F1CE05;
+    width: 33px;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+}
+
 
 /* Toolbar Icon */
 
 .tool-fontAw-Icon{
-    font-size: 60px;
+    font-size: 26px;
 }
 
-.tool-tri-Icon{
-    font-size: 60px;
+.hide-line-width{
+    display: none;
 }
 
-/* Change color on hover */
-.toolbar a:hover {
-    background-color: #b8d9ff;
-    border-radius: 40%;
-    transition-duration: 1s;
+.hide-eraser-width{
+    display: none;
+}
+
+
+
+/* Toolbar Slider */
+
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
   }
-/* Change color on selected icon */
-.selected {
-    background-color:#83B5E9;
+  
+  /* The Slider*/
+  .slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 10px; /* Specified height */
+    background:#2e4279;
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 2 seconds transition on hover */
+    transition: opacity .2s;
+    border-radius: 5px;
+  }
+  
+  /* Mouse-over Effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 18px; /* Set a specific slider handle width */
+    height: 18px; /* Slider handle height */
+    background: #F1CE05;
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 100%;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 10px; /* Set a specific slider handle width */
+    height: 10px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 100%;
+  }
+
+/* Header */
+
+.h1{
+font-family: 'Poiret One', cursive !important;
+font-size: 65px !important;
+letter-spacing: -6px !important;  
+color: #FFC100  !important;
+font-style: normal;
+font-variant: small-caps;
+display: flex;
+justify-content: center;
+align-items: center;
 }
-.canvasDiv{
-    width: 100%;
- 
-}
-#img-data-div{
-    width: 100%;
-    max-width: 900px;
-    height: 200px;
-}
+
+
+
 /* Resize image to container */
+
 .toolbar a img{
     max-width: 100%;
     height:auto;
 }
 
 .row{
-    display: flex;
+    display: inline-block;
     justify-content: center;
-    
+    flex-wrap: wrap;
+
 }
 
 #canvas-real{
-    border: 1px black;
-    border-radius: 3%;
+    border-radius: 0.5%;
     position: absolute;
     background-color: #ffffff;
 }
 
 #canvas-draft{
-    border: 1px black;
-    border-radius: 3%;
+    border-radius: 0.5%;
     position: absolute;
     background-color: transparent;
+}
+
+.canvasDiv{
+    width: 100%;
 }

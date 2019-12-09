@@ -1,18 +1,21 @@
+
+// Free Line Drawing Function
+
 class DrawingLine extends PaintFunction{
     constructor(contextReal){
         super();
-        this.context = contextReal;            
-        // this.selectedStrokeColour = selectedStrokeColour;
+        this.context = contextReal;
     }
     
     onMouseDown(coord,style){
         this.context.strokeStyle = style.selectedStrokeColour;
+        this.context.lineWidth = document.getElementById("line-width").value
         this.context.lineCap = "round";
-        this.context.lineWidth = 5;
         this.context.beginPath();
         this.context.moveTo(coord[0],coord[1]);
         this.draw(coord[0],coord[1]);
     }
+
     onDragging(coord){
         this.draw(coord[0],coord[1]);
     }

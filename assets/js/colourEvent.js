@@ -1,5 +1,5 @@
 
-// Colour Change
+// Colour Change Events Function
 
 $(`.blackI`).click(function (){
     style.selectedStrokeColour = '#000000'

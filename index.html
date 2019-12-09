@@ -4,45 +4,43 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width = device-width, initial-scale = 1">
-    <title>JavaScript Paint App</title>
-    <link rel="stylesheet" type="text/css" href="/ProjectCanvasUpdated/assets/css/canvastest.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="/ProjectCanvas/assets/css/colour.css">
-    <link rel="stylesheet" href="/ProjectCanvas/assets/css/tools-icon.css">
-    <link rel="stylesheet" href="/ProjectCanvas/assets/css/colourWheel.css">
+    <title>Project Canvas</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/canvastest.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/colour.css">
     <script src="https://kit.fontawesome.com/9cf44c700d.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Poiret+One&display=swap" rel="stylesheet">
+
 </head>
 
+<!------------------------------- Main Body -------------------------------->
 
 <body class="bg">
 
-    <div class="wrapper">
-        <div class="toolbar">
-            <a href="#" id="free" onclick="ChangeTool('free')">
-                <i class="fas fa-pencil-alt tool-fontAw-Icon"></i></a>
+    <!-- Canvas Project Title -->
 
-            <a href="#" id="line" onclick="ChangeTool('line')">
-                <i class="fas fa-pencil-ruler tool-fontAw-Icon"></i></a>
-
-            <a href="#" id="rectangle" onclick="ChangeTool('rectangle')">
-                <i class="far fa-square tool-fontAw-Icon"></i></a>
-
-            <a href="#" id="circle" onclick="ChangeTool('circle')">
-                <i class="far fa-circle tool-fontAw-Icon"></i></a>
-
-            <a href="#" id="triangle" onclick="ChangeTool('triangle')">
-                <i class="fas fa-caret-up tool-tri-Icon"></i></a>
+    <section>
+        <h1 class="h1">
+            Canvas4
+        </h1>
+    </section>
 
 
-        </div>
-    </div><br>
     <section class="container-fluid colourSection">
         <div class="row">
+
+            <!-- Colour Changer Section -->
+
             <div class="col-1">
                 <h2 class="h2">
                     Colour Changer
                 </h2>
+
+                <!-- Colour Buttons -->
+
                 <i class="fas fa-palette colourIcon"></i>
+
                 <button type="button" class="blackI colourSpace"></button>
                 <button type="button" class="whiteI colourSpace"></button>
                 <button type="button" class="redI colourSpace"></button>
@@ -51,42 +49,136 @@
                 <button type="button" class="greenI colourSpace"></button>
                 <button type="button" class="orangeI colourSpace"></button>
                 <button type="button" class="purpleI colourSpace"></button>
+
             </div>
-            <section class="col-11">
+
+            <!-- Canvas Section -->
+
+            <section class="col-10">
                 <div class='canvasDiv'>
-                    <canvas id="canvas-real" class="canvas" width="1150px" height="720px"
-                        style="border:3px black solid"></canvas>
-                    <canvas id="canvas-draft" class="canvas" width="1150px" height="720px"
-                        style="border:3px black solid"></canvas>
+
+                    <canvas id="canvas-real" class="canvas" width="1050px" height="550px"
+                        style="border:2px #FDBB30 solid"></canvas>
+
+                    <canvas id="canvas-draft" class="canvas" width="1050px" height="550px"
+                        style="border:2px #FDBB30 solid"></canvas>
+
                 </div>
             </section>
+
+            <!-- Toolbar Section -->
+
+            <div class="wrapper  col-1">
+                <div class="toolbar">
+
+                    <div>
+                        <div>
+                            <a href="#free" id="free" class="collapsed" data-toggle="collapse">
+                                <i class="fas fa-pencil-alt tool-fontAw-Icon"></i></a>
+                        </div>
+
+                        <!-- Brush Width -->
+
+                        <div class="hide-line-width">
+                            <div class="slidecontainer">
+                                <input type="range" min="1" max="100" value="50" class="slider" id="line-width">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <a href="#eraser" id="eraser" class="collapsed" data-toggle="collapse">
+                                <i class="fas fa-eraser tool-fontAw-Icon"></i></a>
+                        </div>
+
+                        <!-- Eraser Width -->
+
+                        <div class="hide-eraser-width">
+                            <div class="slidecontainer">
+                                <input type="range" min="1" max="100" value="50" class="slider" id="eraser-width">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <a href="#" id="line">
+                            <i class="fas fa-pencil-ruler tool-fontAw-Icon"></i></a>
+                    </div>
+
+                    <div>
+                        <a href="#" id="curve">
+                            <i class="fab fa-cuttlefish tool-fontAw-Icon"></i></a>
+                    </div>
+
+                    <div>
+                        <a href="#" id="rectangle">
+                            <i class="far fa-square tool-fontAw-Icon"></i></a>
+                    </div>
+
+                    <div>
+                        <a href="#" id="circle">
+                            <i class="far fa-circle tool-fontAw-Icon"></i></a>
+                    </div>
+
+                    <div>
+                        <a href="#" id="triangle">
+                            <i class="fas fa-caret-up tool-fontAw-Icon"></i></a>
+                    </div>
+
+                    <div>
+                        <a href="#" id="stamp">
+                            <i class="fas fa-poo tool-fontAw-Icon"></i></a>
+                    </div>
+
+                    <div>
+                        <a href="#" id="undo">
+                            <i class="fas fa-undo-alt tool-fontAw-Icon"></i></a>
+                    </div>
+
+                    <div>
+                        <a href="#" id="redo">
+                            <i class="fas fa-redo-alt tool-fontAw-Icon"></i></a>
+                    </div>
+
+                    <div>
+                        <a href="#" id="clear">
+                            <i class="fas fa-trash-alt tool-fontAw-Icon"></i></a>
+                    </div>
+
+                    <div>
+                        <a href="#" id="download" download="canvas.jpg">
+                            <i class="fas fa-cloud-download-alt tool-fontAw-Icon"></i></a>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
     </section>
-    <!-- JS -->
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <!-- <script type="text/javascript" src="canvastest.js"></script> -->
-    <script type="text/javascript" src="/ProjectCanvas/assets/js/canvas-common.js"></script>
-    <script type="text/javascript" src="/ProjectCanvas/assets/js/canvastest.js"></script>
-    <script type="text/javascript" src="/ProjectCanvas/assets/js/drawing-circle.js"></script>
-    <script type="text/javascript" src="/ProjectCanvas/assets/js/drawing-line.js"></script>
-    <script type="text/javascript" src="/ProjectCanvas/assets/js/drawing-rectangle.js"></script>
-    <script type="text/javascript" src="/ProjectCanvas/assets/js/drawing-triangle.js"></script>
-    <script type="text/javascript" src="/ProjectCanvas/assets/js/drawing-straight.js"></script>
-    <script type="text/javascript" src="/ProjectCanvas/assets/js/colourEvent.js"></script>
-    <script type="text/javascript" src="/ProjectCanvas/assets/js/tools-drawingline.js"></script>
-    <!-- <script type="text/javascript" src="colourWheel.js"></script> -->
+    <!-- JavaScripts -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/canvas-common.js"></script>
+    <script type="text/javascript" src="assets/js/drawing-circle.js"></script>
+    <script type="text/javascript" src="assets/js/drawing-line.js"></script>
+    <script type="text/javascript" src="assets/js/drawing-rectangle.js"></script>
+    <script type="text/javascript" src="assets/js/drawing-triangle.js"></script>
+    <script type="text/javascript" src="assets/js/drawing-straight.js"></script>
+    <script type="text/javascript" src="assets/js/colourEvent.js"></script>
+    <script type="text/javascript" src="assets/js/tools-drawingline.js"></script>
+    <script type="text/javascript" src="assets/js/drawing-stamp.js"></script>
+    <script type="text/javascript" src="assets/js/drawing-eraser.js"></script>
+    <script type="text/javascript" src="assets/js/drawing-curve.js"></script>
+    <script type="text/javascript" src="assets/js/drawing-undo-redo.js"></script>
+    <script type="text/javascript" src="assets/js/drawing-download.js"></script>
+
+    <!-- Default Function -->
 
     <script type="text/javascript">
-        // var selectedStrokeColour = '#000000'
-        // var selectedFillColour = '#000000'
         currentFunction = new DrawingLine(contextReal, contextDraft);
-
     </script>
-
-
-
 
 
 </body>

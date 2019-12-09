@@ -1,3 +1,6 @@
+
+// Drawing Straight Line Function
+
 let heartHeight;
 let topCurveHeight;
 let width;
@@ -7,8 +10,6 @@ class DrawingHeart extends PaintFunction{
         super();
         this.contextReal = contextReal;
         this.contextDraft = contextDraft;
-        // this.selectedStrokeColour = selectedStrokeColour;
-        // this.selectedFillColour = selectedFillColour;
         this.selectedLineWidth = 5;
     }
 
@@ -50,12 +51,9 @@ class DrawingHeart extends PaintFunction{
         this.contextReal.bezierCurveTo(this.origX, this.origY+(heartHeight+topCurveHeight)/2, this.origX+width/2, this.origY+(heartHeight+topCurveHeight)/2, coord[0]+width/2, coord[1]+topCurveHeight);
         this.contextReal.bezierCurveTo(this.origX+width/2, this.origY, this.origX, this.origY, coord[0], coord[1]+topCurveHeight);
         this.contextReal.closePath();
-        // this.contextReal.fillStyle = this.selectedFillColour;
         this.contextReal.lineJoin = 'round';
         this.contextReal.fill();
         this.contextReal.stroke();
-        // History
-        // history.push($('#canvas-real')[0].toDataURL());
 
     }
     onMouseLeave(){}

@@ -1,93 +1,98 @@
 
-/* Colour Changer */
+/* Colour Changer Section */
 
 .colourSection{
 background-color: transparent;
 }
 
 .h2{
-    font-family: Verdana, Geneva, sans-serif;
-font-size: 24px;
+font-family: 'Poiret One', cursive !important;
+font-size: 26px;
 letter-spacing: -0.2px;
 word-spacing: -0.2px;
-color: #000000;
-font-weight: 700;
-text-decoration: none;
-font-style: normal;
+color: #FFC100; 
 font-variant: small-caps;
-text-transform: none;
 }
+
+
+
+/* Colour Changer Icon */
 
 .colourIcon{
     padding-bottom: 20px;
     padding-top: 0px;
-    font-size: 50pt;
+    font-size: 30pt;
+    color: #FF851B;
 }
 
+
+
+/* Colour Icon */
+
 .colourSpace{
-    margin: 30px;
+    margin: 10px;
 }
 
 .blackI{
 background: #000000;
-height: 60px;
-width: 60px;
+height: 30px;
+width: 30px;
 display: flex;
 border-radius: 30%;
 }
 
 .whiteI{
 background: #FFFFFF;
-height: 60px;
-width: 60px;
+height: 30px;
+width: 30px;
 display: flex;
 border-radius: 30%;
 }
 
 .redI{
 background: #C70039;
-height: 60px;
-width: 60px;
+height: 30px;
+width: 30px;
 display: flex;
 border-radius: 30%;
 }
 
 .blueI{
 background:#2377D0;
-height: 60px;
-width: 60px;
+height: 30px;
+width: 30px;
 display: flex;
 border-radius: 30%;
 }
 
 .yellowI{
 background: #FFE018;
-height: 60px;
-width: 60px;
+height: 30px;
+width: 30px;
 display: flex;
 border-radius: 30%;
 }
 
 .orangeI{
 background: #FF5733 ;
-height: 60px;
-width: 60px;
+height: 30px;
+width: 30px;
 display: flex;
 border-radius: 30%;
 }
 
 .greenI{
 background: #24AD16;
-height: 60px;
-width: 60px;
+height: 30px;
+width: 30px;
 display: flex;
 border-radius: 30%;
 }
 
 .purpleI{
 background: #900C3F ;
-height: 60px;
-width: 60px;
+height: 30px;
+width: 30px;
 display: flex;
 border-radius: 30%;
 }

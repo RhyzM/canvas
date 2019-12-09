@@ -1,10 +1,11 @@
+
+// Drawing Rectangle Function
+
 class DrawingRectangle extends PaintFunction{
     constructor(contextReal,contextDraft, selectedStrokeColour, selectedFillColour){
         super();
         this.contextReal = contextReal;
-        this.contextDraft = contextDraft;       
-        // this.selectedStrokeColour = selectedStrokeColour;
-        // this.selectedFillColour = selectedFillColour;     
+        this.contextDraft = contextDraft;
     }
     
     onMouseDown(coord,style){
