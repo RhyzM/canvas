@@ -10,12 +10,9 @@
 /* Cursor */
 
 canvas:hover {
-    cursor: url(/ProjectCanvas/assets/img/pen-cur.png),default;
+    cursor: url(/assets/img/pen-cur.png),default;
   }
 
-.eraserCursor{
-    cursor: url(/ProjectCanvas/assets/img/erz-cur.png),default;
-}
 
 /* Toolbar Space */
 
